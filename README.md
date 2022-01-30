@@ -1,6 +1,3 @@
-h3z>DtV)6]j*y2RB
-
-
 RUNNING THE SERVER
 From root directory
 1. Go to the api project in the server directory
