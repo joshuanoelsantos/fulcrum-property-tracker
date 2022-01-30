@@ -1,0 +1,59 @@
+.bidding-wrapper,
+.available-bids-list,
+.header-property-info-wrapper{
+    display: flex;
+}
+.bidding-wrapper{
+    background-color: #fff;
+    width: 15.6%;
+    justify-content: space-between;
+}
+.available-bids-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 68.8%;
+    position: relative;
+    padding: 10px;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        opacity: 0.4;
+    }
+}
+.header-property-info-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bidding-status{
+    padding: 10px;
+    .status{
+        font-size: 18px;
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+    .val{
+        font-family: "Poppins-SemiBold";
+    }
+}
+.active{
+    .val{
+        color: #8F8F8F;
+    }
+}
+.winning{
+    .val{
+        color: #00EB3E;
+    }
+}
+.outbid{
+    .val{
+        color: #E91C1C;
+    }
+}

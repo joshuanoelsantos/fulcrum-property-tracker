@@ -1,0 +1,58 @@
+<div class="header-property-info-wrapper">
+    <div class="bidding-wrapper">
+        <div class="outbid bidding-status">
+            <p class="status">Outbid</p>
+            <p class="val">{{bidTotals?.outbid?.count}}</p>
+        </div>
+        <div class="active bidding-status">
+            <p class="status">Active</p>
+            <p class="val">{{bidTotals?.active?.count}}</p>
+        </div>
+        <div class="winning bidding-status">
+            <p class="status">Winning</p>
+            <p class="val">{{bidTotals?.winning?.count}}</p>
+        </div>
+    </div>
+    <div class="available-bids-list">
+        <app-header-available-bid-item *ngFor="let bid of bids"
+            [address] = "bid.address1"
+            [priceIndicator] = "bid.highestBidDifference"
+            [reservedBid] = "bid.currentBid"
+            routerLink="/{{ bid.bidId }}"
+        ></app-header-available-bid-item>
+        <!-- <app-header-available-bid-item
+            address = "14 Flood Street"
+            [priceIndicator] = 100
+            [reservedBid] = 5000
+        ></app-header-available-bid-item>
+        <app-header-available-bid-item
+            address = "24 Washington Ave."
+            [priceIndicator] = -100
+            [reservedBid] = 5200
+        ></app-header-available-bid-item>
+        <app-header-available-bid-item
+            address = "289 Hempstead St."
+            [priceIndicator] = 0
+            [reservedBid] = 5000
+        ></app-header-available-bid-item>
+        <app-header-available-bid-item
+            address = "57 West Ave G."
+            [priceIndicator] = 100
+            [reservedBid] = 5000
+        ></app-header-available-bid-item> -->
+    </div>
+    <div class="bidding-wrapper">
+        <div class="winning bidding-status">
+            <p class="status">Winning</p>
+            <p class="val">{{bidTotals?.outbid?.amount | currency : 'USD' : 'symbol' : '1.0-2'}}</p>
+        </div>
+        <div class="active bidding-status">
+            <p class="status">Active</p>
+            <p class="val">{{bidTotals?.active?.amount | currency : 'USD' : 'symbol' : '1.0-2'}}</p>
+        </div>
+        <div class="outbid bidding-status">
+            <p class="">Outbid</p>
+            <p class="val">{{bidTotals?.winning?.amount | currency : 'USD' : 'symbol' : '1.0-2'}}</p>
+        </div>
+    </div>
+</div>

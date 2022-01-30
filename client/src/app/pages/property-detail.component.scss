@@ -1,0 +1,45 @@
+.property-for-sale-content {
+  position: relative;
+  overflow: hidden;
+}
+.header-detail-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.property-image {
+  width: 100%;
+  height: auto;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+
+  font-size: 0;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  &:after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+.next {
+  right: -205px;
+}
+
+.prev {
+  left: -205px;
+}

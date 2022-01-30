@@ -1,0 +1,23 @@
+<div class="available-for-bids">
+    <div class="land-address">
+        <span [ngClass]="{'green': priceIndicator > 0, 'red': priceIndicator < 0 }" class="indicator">
+            
+            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.427884 0L9.81026 9.38238L0 19.1926L0.427884 0Z" fill="#767676"/>
+            </svg>
+        </span>
+        <p class="address">{{address}}</p>
+    </div>
+    <div class="prices-varaiety">
+        <span
+            *ngIf="priceIndicator !== 0"
+            [ngClass]="{'green': priceIndicator > 0, 'red': priceIndicator < 0 }"
+            class="price-indicator">
+            {{priceIndicator | currency : 'USD' : 'symbol' : '1.0-2'}}
+        </span>
+        <span *ngIf="priceIndicator === 0" class="price-indicator">
+            $
+        </span>
+        <p class="reserved-bid">{{reservedBid | currency : 'USD' : 'symbol' : '1.0-2'}}</p>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.available-for-bids{
+    position: relative;
+    z-index: 1;
+}
+.land-address{
+    display: flex;
+}
+.address{
+    font-family: 'Poppins-SemiBold';
+    margin-left: 5px;
+}
+.prices-varaiety{
+    display: flex;
+    justify-content: space-around;
+}
+.indicator{
+    &.red{
+        transform: translateY(0) rotate(45deg);
+        svg path{
+            fill: #E91C1C;
+        }
+    }
+    &.green{
+        transform: translate(4px,-6px) rotate(-45deg);
+        svg path{
+            fill: #00EB3E;
+        }
+    }
+}
+.price-indicator{
+    font-family: "Poppins-SemiBold";
+    &.red{
+        color: #E91C1C;
+    }
+    &.green{
+        color: #00EB3E;
+    }
+}

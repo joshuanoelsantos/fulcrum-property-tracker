@@ -1,0 +1,17 @@
+<div class="property-for-sale-content">
+    <div class="next">Next</div>
+    <div class="prev">Prev</div>
+    <div class="header-detail-wrapper">
+        <app-header-details
+        [selectedBid]="selectedBid">
+        </app-header-details>
+        <app-property-info
+        [bids]="bids"
+        [bidTotals]="bidTotals">
+        </app-property-info>
+    </div>
+    <app-property-for-sale
+        [selectedBid]="selectedBid">
+    </app-property-for-sale>
+    <img class="property-image" src={{imageSrc}} alt="Property">
+</div>

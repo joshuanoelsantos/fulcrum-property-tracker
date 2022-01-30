@@ -1,0 +1,25 @@
+
+.header-details-wrapper{
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        opacity: 0.8;
+    }
+}
+.header-content-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 75px 75px 63px;
+    width: 100%;
+    max-width: 2230px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
