@@ -21,4 +21,4 @@ From root directory
 3. Run the client app
 	`npm start`  
 
-4. Access the client app by opening a browser and going to url "https://localhost:4200"
+4. Access the client app by opening a browser and going to url "http://localhost:4200"
